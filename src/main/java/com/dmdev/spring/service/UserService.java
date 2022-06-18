@@ -6,7 +6,7 @@ import com.dmdev.spring.database.repository.UserRepository;
 public class UserService {
 private final UserRepository userRepository;
 private final CompanyRepository companyRepository;
-private CompanyService companyService;
+//private CompanyService companyService;
 
     public UserService(UserRepository userRepository,
                        CompanyRepository companyRepository) {
@@ -14,7 +14,7 @@ private CompanyService companyService;
         this.companyRepository = companyRepository;
     }
 
-    public void setCompanyService(CompanyService companyService) {
-        this.companyService = companyService;
-    }
+//    public void setCompanyService(CompanyService companyService) {
+//        this.companyService = companyService;
+//    }
 }
