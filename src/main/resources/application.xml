@@ -11,6 +11,8 @@
     <!--    <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">-->
     <!--        <property name="locations" value="application.properties"/>-->
     <!--    </bean>-->
+    <bean class="com.dmdev.spring.bfpp.LogBeanFactoryPostProcessor"/>
+    <bean class="com.dmdev.spring.bfpp.VerifyPropertyBeanFactoryPostProcessor"/>
     <bean id="driver" class="java.lang.String">
         <constructor-arg type="java.lang.String" value="${db.driver}"/>
     </bean>
@@ -37,7 +39,8 @@
                 <entry key="test" value="#{driver.length()>10}"/>
                 <entry key="test1" value="#{driver.length()>T(Math).random()*10}"/>
                 <entry key="currentUser" value="#{systemProperties['user.name']}"/>
-<!--                <entry key="currentUser" value="${db.username}"/>-->
+                <!--                <entry key="currentUser" value="${db.username}"/>-->
+                <entry key="hosts" value="#{'${db.hosts}'.split(',')}"/>
                 <entry key="hosts" value="#{'${db.hosts}'.split(',')}"/>
             </map>
         </property>
