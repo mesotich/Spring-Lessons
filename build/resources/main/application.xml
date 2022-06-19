@@ -7,7 +7,9 @@
                            http://www.springframework.org/schema/context
                            http://www.springframework.org/schema/context/spring-context-4.0.xsd"
 >
+    <cotext:annotation-config/>
     <cotext:property-placeholder location="classpath:application.properties"/>
+<!--    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>-->
     <!--    <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">-->
     <!--        <property name="locations" value="application.properties"/>-->
     <!--    </bean>-->
@@ -16,9 +18,7 @@
     <bean id="driver" class="java.lang.String">
         <constructor-arg type="java.lang.String" value="${db.driver}"/>
     </bean>
-    <bean id="pool1" name="p1,p2,p3" class="com.dmdev.spring.database.pool.ConnectionPool"
-          init-method="init"
-          destroy-method="destroy">
+    <bean id="pool1" name="p1,p2,p3" class="com.dmdev.spring.database.pool.ConnectionPool">
         <constructor-arg name="poolSize" type="java.lang.Integer" value="${db.pool.size}"/>
         <constructor-arg name="args" type="java.util.List">
             <list>
