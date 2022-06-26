@@ -1,4 +1,4 @@
-package com.dmdev.spring.web.config;
+package com.dmdev.web.config;
 
 import org.springframework.context.annotation.Configuration;
 
