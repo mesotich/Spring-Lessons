@@ -16,7 +16,7 @@
         <cotext:include-filter type="assignable" expression="com.dmdev.spring.database.repository.CrudRepository"/>
         <cotext:include-filter type="regex" expression="com\..+Repository"/>
     </cotext:component-scan>
-    <cotext:property-placeholder location="classpath:application.properties"/>
+<!--    <cotext:property-placeholder location="classpath:application.properties"/>-->
     <!--    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>-->
     <!--    <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">-->
     <!--        <property name="locations" value="application.properties"/>-->
